@@ -6,7 +6,7 @@ import MainNavigator from './MainNavigator';
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
-  const isAuthenticated = false;
+  const isAuthenticated = true;
 
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>

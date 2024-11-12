@@ -1,12 +1,12 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import LoginScreen from "../screens/auth/LoginScreen"; // Quita las llaves `{ }`
+import LoginScreen from "../screens/auth/LoginScreen";
 import RegisterScreen from "../screens/auth/RegisterScreen";
 
 const Stack = createStackNavigator();
 
 const AuthNavigator = () => (
-  <Stack.Navigator initialRouteName="Login">
+  <Stack.Navigator initialRouteName="Login"  screenOptions={{ headerShown: false }}>
     <Stack.Screen name="Login" component={LoginScreen} />
     <Stack.Screen name="Register" component={RegisterScreen} />
   </Stack.Navigator>
