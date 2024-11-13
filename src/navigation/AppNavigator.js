@@ -2,11 +2,12 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import AuthNavigator from './AuthNavigator';
 import MainNavigator from './MainNavigator';
+import { useAuth } from "../hooks/useAuth";
 
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
-  const isAuthenticated = true;
+  const { isAuthenticated } = useAuth();
 
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
